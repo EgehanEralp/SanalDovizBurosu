@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:ems="10"
+
+        android:textColorLink="@android:color/holo_green_dark"
+        android:textStyle="italic"
+        android:inputType="number"/>
+
+    <RadioGroup
+        android:id="@+id/bgrup"
+        android:layout_width="match_parent"
+        android:layout_height="116dp">
+
+        <RadioButton
+            android:id="@+id/tlrb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TL" />
+
+        <RadioButton
+            android:id="@+id/dolarrb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="USD" />
+
+        <RadioButton
+            android:id="@+id/eurorb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EURO" />
+    </RadioGroup>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:text="ÇEVİR"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tlT"
+        android:layout_width="275dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:text="TL ="
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/dolarT"
+        android:layout_width="277dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:text="USD ="
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/euroT"
+        android:layout_width="277dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:text="EURO ="
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/poundT"
+        android:layout_width="277dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:text="GBP ="
+        android:textStyle="bold" />
+</LinearLayout>
