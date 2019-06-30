@@ -3,6 +3,8 @@ package com.example.egehaneralp.sanaldovizburosu;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
@@ -48,7 +50,26 @@ public class MainActivity extends AppCompatActivity{
 
         editText=findViewById(R.id.editText);
 
-        button=findViewById(R.id.button);
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                new ArkaPlan().execute("https://api.exchangeratesapi.io/latest?base=TRY");
+            }
+        });
+
+
+
+        /*button=findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,7 +77,7 @@ public class MainActivity extends AppCompatActivity{
                 new ArkaPlan().execute("https://api.exchangeratesapi.io/latest?base=TRY");
 
             }
-        });
+        });*/
 
     }
 
@@ -138,15 +159,15 @@ public class MainActivity extends AppCompatActivity{
 
                     double kur=json2.getDouble("EUR");
 
-                    tlT.setText("TL = "+ ((1/kur)*girilensayi));
+                    tlT.setText("TL      ="+ ((1/kur)*girilensayi));
 
                     double a=json2.getDouble("USD");
-                    dolarT.setText("USD = "+((a/kur)*girilensayi));
+                    dolarT.setText("USD    ="+((a/kur)*girilensayi));
 
-                    euroT.setText("EUR = "+girilensayi);
+                    euroT.setText("EURO ="+girilensayi);
 
                     double c=json2.getDouble("GBP");
-                    poundT.setText("GBP = "+((c/kur)*girilensayi));
+                    poundT.setText("GBP   ="+((c/kur)*girilensayi));
                 }
 
 

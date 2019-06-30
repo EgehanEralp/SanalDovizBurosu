@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,18 +9,23 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="match_parent"
+        android:layout_width="191dp"
         android:layout_height="65dp"
-        android:ems="10"
 
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="none|number"
         android:textColorLink="@android:color/holo_green_dark"
-        android:textStyle="italic"
-        android:inputType="number"/>
+        android:textStyle="italic" />
 
     <RadioGroup
         android:id="@+id/bgrup"
         android:layout_width="match_parent"
-        android:layout_height="116dp">
+        android:layout_height="116dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="65dp">
 
         <RadioButton
             android:id="@+id/tlrb"
@@ -40,43 +45,61 @@
             android:layout_height="wrap_content"
             android:text="EURO" />
     </RadioGroup>
+
     <Button
         android:id="@+id/button"
         android:layout_width="150dp"
         android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:text="ÇEVİR"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/tlT"
         android:layout_width="275dp"
         android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:text="TL ="
+        android:layout_marginTop="204dp"
+        android:text="TL      ="
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/dolarT"
         android:layout_width="277dp"
         android:layout_height="40dp"
+        android:layout_below="@+id/tlT"
+        android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:text="USD ="
+        android:text="USD    ="
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/euroT"
         android:layout_width="277dp"
         android:layout_height="40dp"
+        android:layout_below="@+id/dolarT"
+        android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:text="EURO ="
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/poundT"
         android:layout_width="277dp"
         android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:text="GBP ="
+        android:layout_marginBottom="149dp"
+        android:text="GBP   ="
+        android:textSize="18sp"
         android:textStyle="bold" />
-</LinearLayout>
+</RelativeLayout>
